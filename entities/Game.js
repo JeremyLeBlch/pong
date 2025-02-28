@@ -104,11 +104,11 @@ export default class Game {
     this.ctx.fillText(`${score.player} - ${score.opponent}`, this.canvas.width / 2, 30);
 
     //end game
-    if (score.player === 1 || score.opponent === 1) {
+    if (score.player === 5 || score.opponent === 5) {
       this.ctx.fillStyle = "white";
       this.ctx.font = "24px Arial";
       this.ctx.textAlign = "center";
-      if (score.player === 1) {
+      if (score.player === 5) {
         this.ctx.fillText(`Victoire du joueur`, this.canvas.width / 2, this.canvas.height / 2);
       } else {
         this.ctx.fillText(`Victoire de l'adversaire`, this.canvas.width / 2, this.canvas.height / 2);
