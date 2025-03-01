@@ -4,50 +4,6 @@ import Opponent from "./Opponent.js";
 import KeyboardController from "../controllers/Keyboard-controller.js";
 import IAController from "../controllers/IA-controller.js";
 
-/*
-
-abstraction !!
-
-interface -> plusieurs implementation
-
- */
-
-/* ECS (entity component system)
-
-const world = new World(new CanvasRendererEngine());
-
-World
- - renderEngine: RenderEngine (html, ios, android...)
- - gameObjects: GameObject[]
- - update : gameObjects.forEach(go => go.update(deltaTime));
-
-GameObject
-    - position: Vector2
-    - scale: Vector2
-    - children: GameObject[]
-    - components: Component[]
-          - renderer (1 max)
-          - colliders[] (collisions)
-          - script custom !
-    - update : children.forEach(go => go.update(deltaTime));
-
-
- SpriteRenderer {
-   render(){
-     World.rendererEngine.fillRect(this.x, this.y, this.width, this.height);
-   }
- }
-
- const ball = new GameObject('Ball');
- ball.addComponent(new BallScript()); // script perso
-
- const ballDesign = new GameObject('BallDesign');
- ballDesign.addComponent(new SpriteRenderer('../image.png', 100, 100));
- ballDesign.addComponent(new CircleCollider(50));
-
- ball.addChildren(ballDesign);
- */
-
 export default class Game {
 
   constructor(canvasId) {
